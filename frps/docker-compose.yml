@@ -2,6 +2,7 @@ version: '3.1'
 services:
   frps:
     container_name: frps
+    image: frp:latest
     build:
       context: ../
     volumes:

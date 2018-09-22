@@ -1,0 +1,2 @@
+/frp?/logs/*
+!/frp?/logs/.gitkeep

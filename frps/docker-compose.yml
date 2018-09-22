@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  frps:
+    container_name: frps
+    build:
+      context: ../
+    volumes:
+      - ./logs:/frp/logs
+      - ./frps.ini:/frp/frps.ini:ro
+    restart: always
+    entrypoint: /frp/frps -c /frp/frps.ini
+    ports:
+      # TODO: change your ports here
+      - "7000:7000"
+      - "6000:6000"
